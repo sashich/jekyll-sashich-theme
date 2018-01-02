@@ -1,0 +1,17 @@
+<div class="pagination-centered">
+  <ul class="pagination">
+    {% if paginator.previous_page %}
+      <li>
+        {% if paginator.previous_page > 1 %}
+          <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="previous">&laquo; Назад</a>
+        {% else %}
+          <a href="{{ site.baseurl }}" class="previous">&laquo; Назад</a>
+        {% endif %}
+      </li>
+    {% endif %}
+
+    {% if paginator.next_page %}
+      <li class="next"><a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Вперед &raquo;</a></li>
+    {% endif %}
+  </ul>
+</div>
