@@ -63,3 +63,7 @@
   border-radius: 200px;
   border: 1px solid #eee;
 }
+
+h1 {
+  line-height: 1.1;
+}
