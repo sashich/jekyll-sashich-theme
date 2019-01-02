@@ -1,5 +1,16 @@
-.container {
-  margin-top: 30px;
+body {
+  background: #f8f9fa;
+}
+
+/* Grid */
+.grid-container {
+  max-width: 65rem;
+}
+
+/* Pictures */
+.gallery {
+  margin-right: -30px;
+  margin-left: -30px;
   margin-bottom: 30px;
 }
 
@@ -20,10 +31,12 @@
   margin-bottom: 5px;
 }
 
+/* Post */
 .post {
   background: white;
   padding: 30px;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  box-shadow: 0 0px 16px rgba(0, 0, 0, 0.12);
   margin-bottom: 30px;
 }
 
@@ -54,16 +67,51 @@
   color: black;
 }
 
+/* Typography */
 .subheader {
   font-weight: 300;
 }
 
+h1 {
+  line-height: 1.1;
+}
+
+/* Avatar */
 #avatar {
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   border-radius: 200px;
   border: 1px solid #eee;
 }
 
-h1 {
-  line-height: 1.1;
+/* Card */
+.card {
+  border: 0px;
+  border-radius: 5px;
+}
+
+.card:hover {
+  box-shadow: 0 0px 16px rgba(0, 0, 0, 0.12);
+}
+
+.card-section:first-child {
+  background: #e6e8eb;
+}
+
+/* Navbar */
+.top-bar, .top-bar ul {
+  background-color: transparent;
+}
+
+.top-bar {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.top-bar .menu li.current {
+  background: #1779ba;
+  border-radius: 5px;
+}
+
+.top-bar .menu li.current a {
+  color: #ffffff;
 }

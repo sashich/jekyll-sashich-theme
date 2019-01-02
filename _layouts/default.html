@@ -6,22 +6,27 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ site.title }} | {{ site.description }}</title>
-    {% seo %}
-    <!-- If you are using CSS version, only link these 2 files, you may add app.css to use for your overrides if you like. -->
-    <link rel="stylesheet" href="/assets/css/normalize.css">
-    <link rel="stylesheet" href="/assets/css/foundation.css">
-    <!-- If you are using the gem version, you need this only -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.5.1/css/foundation.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fluidbox/2.0.5/css/fluidbox.min.css">
     <link rel="stylesheet" href="/assets/css/application.css">
-    <script src="/assets/js/vendor/modernizr.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 </head>
 
 <body>
+    <div class="grid-container">
+        {% include navbar.html %}
+    </div>
     <!-- body content here -->
     {{ content }}
-    <script src="/assets/js/vendor/jquery.js"></script>
-    <script src="/assets/js/foundation.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.5.1/js/foundation.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-throttle-debounce/1.1/jquery.ba-throttle-debounce.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fluidbox/2.0.5/js/jquery.fluidbox.min.js"></script>
     <script>
     $(document).foundation();
+    $('a[data-fluidbox]').fluidbox();
     </script>
 </body>
 

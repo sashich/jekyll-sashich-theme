@@ -1,23 +1,22 @@
 <aside>
     <figure class="avatar">
         <a href="/">
-            <img src="/assets/images/alexander-chaychuk.jpg" id="avatar" title="Alexander Chaychuk" height="91" width="91">
+            <img src="{{ site.data.sidebar.avatar }}" id="avatar" title="{{ site.data.sidebar.title }}" height="91" width="91">
         </a>
         <figcaption>
             <strong>
-                    <small>Александр Чайчук</small>
+                    <small>{{ site.data.sidebar.name }}</small>
                 </strong>
         </figcaption>
     </figure>
     <section>
-        <small>Основатель и технический директор в Shoppilot. Пишу о своей работе, спорте и о том, что узнаю каждый день.</small>
+        <small>{{ site.data.sidebar.bio }}</small>
     </section>
     <hr>
     <ul class="side-nav-categories">
-        <li><a href="/about.html">Обо мне</a></li>
-        <li><a href="https://twitter.com/sashich">Твитер</a></li>
-        <li><a href="https://www.facebook.com/chaychuk">Фэйсбук</a></li>
-        <li><a href="https://www.instagram.com/mrsashich/?hl=ru">Инстаграм</a></li>
-        <li><a href="http://review.sashich.ru">Оставить отзыв</a></li>
+        {% for category in site.categories %}
+            {% capture category_name %}{{ category | first }}{% endcapture %}
+            <li><a href="/">{{ category_name }}</a></li>
+        {% endfor %}
     </ul>
 </aside>
